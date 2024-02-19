@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main{
+    background: #fa5555;
+    width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+#inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: #ffffff solid 1px;
+}
+
+.input{
+    height: 40px;
+    width: 500px;
+    margin: 10px ;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+
+}
+
+.input:active{
+    box-shadow: 5px 5px 10px 2px #bf0000;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fefefe;
+    background: #fd1f1f;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background: #fdfdfd;
+    color: #fd1f1f;
+}
+
+#taskBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.task {
+    width: 600px;
+    min-height: 40px;
+    background: #f83c3c;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    box-shadow: 5px 5px 10px 2px #bf0000 !important;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task:hover{
+    background: #fd5f5f;
+}
+
+.task > p {
+    color: #fefefe;
+    margin: 10px;
+    text-wrap: break-word;
+}
+
+.select{
+    background: #f31414;
+    border: 2px solid #f31414;
+}
+
+.select > p {
+    color: #000;
+}
+
+.taskDone{
+    color: #6d6d6d;
+    text-decoration: line-through;
+    background: #ffa7a7;
+}
+
+.smBtn{
+    width: 80px;
+    height: 30px;
+    background: #d4cccc;
+    color: #fdfdfd;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    padding: 3px;
+    font-size: 18px;
+}
+
+.smBtn:hover{
+    background: #fcfcfc;
+    color: #000;
+}
+
+.smBtnD{
+    background: #000;
+    margin-left: auto;
+}
+
+.smBtnFin{
+    background: red;
+    text-decoration: none !important;
+}
+
+.finished{
+    background: #655656;
+}
