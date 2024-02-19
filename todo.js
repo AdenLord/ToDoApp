@@ -3,11 +3,13 @@ const inputText = document.getElementById('inputText');
 const addTask = document.getElementById('addTask');
 const removeTaskBtn = document.getElementById('remove-btn');
 const taskBox = document.getElementById('taskBox');
+const dropdown = document.getElementById('myDropdown');
 
 //--event------------------------------------------------------
 function EventListeners(){
     addTask.addEventListener('click', creatTask);
     removeTaskBtn.addEventListener('click', removeTask);
+    dropdown.addEventListener('click', dropdownList);
 }
 
 EventListeners();
@@ -89,4 +91,10 @@ function finThisTask(e){
 function selectThisTask(){
     this.classList.toggle('select');
     this.toggleAttribute("selected");
+}
+
+//--dropdown-----------------------------------------------------------
+function dropdownList(){
+    let i = this.selectedIndex;
+    let m = this.options[i].text;
 }
