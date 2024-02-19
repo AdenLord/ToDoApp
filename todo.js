@@ -102,10 +102,10 @@ function dropdownList(){
 
     if( m == 'finished' ){
         const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
-        textBox = taskElement;
-    }else if ( m == 'unfinished'){
-        console.log('unfinished');
-    } 
+    }
+    // else if ( m == 'unfinished'){
+    //     console.log('unfinished');
+    // } 
     // else if( m == 'All'){
     //     console.log('all')
     // }

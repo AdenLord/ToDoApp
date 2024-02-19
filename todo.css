@@ -92,6 +92,10 @@
     color: #000;
 }
 
+.show{
+    display: block;
+}
+
 .taskDone{
     color: #6d6d6d;
     text-decoration: line-through;
