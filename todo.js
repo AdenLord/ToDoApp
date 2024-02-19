@@ -97,4 +97,12 @@ function selectThisTask(){
 function dropdownList(){
     let i = this.selectedIndex;
     let m = this.options[i].text;
+
+    if( m == 'finished' ){
+        console.log('finshed')
+    }else if ( m == 'unfinished'){
+        console.log('unfinished')
+    } else if( m == 'All'){
+        console.log('all')
+    }
 }
