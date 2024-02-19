@@ -85,6 +85,7 @@ function deleteThisTask(e){
 function finThisTask(e){
     e.stopPropagation()
     this.classList.toggle('finished');
+    this.parentNode.classList.toggle('finished');
 }
 
 //--select--------------------------------------------------------
@@ -97,12 +98,15 @@ function selectThisTask(){
 function dropdownList(){
     let i = this.selectedIndex;
     let m = this.options[i].text;
+    let tasks = taskBox.childNodes;
 
     if( m == 'finished' ){
-        console.log('finshed')
+        const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
+        textBox = taskElement;
     }else if ( m == 'unfinished'){
-        console.log('unfinished')
-    } else if( m == 'All'){
-        console.log('all')
-    }
+        console.log('unfinished');
+    } 
+    // else if( m == 'All'){
+    //     console.log('all')
+    // }
 }

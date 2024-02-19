@@ -48,8 +48,7 @@
 }
 
 .btn:hover{
-    background: #fdfdfd;
-    color: #fd1f1f;
+    border: 2px #eeee00 solid;
 }
 
 #taskBox{
@@ -75,7 +74,7 @@
 }
 
 .task:hover{
-    background: #fd5f5f;
+    border: 2px #eeee00 solid;
 }
 
 .task > p {
@@ -112,9 +111,9 @@
 }
 
 .smBtn:hover{
-    background: #fcfcfc;
-    color: #000;
+    border: 2px #eeee00 solid;
 }
+
 
 .smBtnD{
     background: #000;
