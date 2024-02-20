@@ -3,6 +3,7 @@ const inputText = document.getElementById('inputText');
 const addTask = document.getElementById('addTask');
 const removeTaskBtn = document.getElementById('remove-btn');
 const taskBox = document.getElementById('taskBox');
+const finishedTasksBox = document.getElementById('finishedTasksBox');
 const dropdown = document.getElementById('myDropdown');
 
 //--event------------------------------------------------------
@@ -101,22 +102,22 @@ function dropdownList(){
     let m = this.options[i].text;
     // let tasks = taskBox.childNodes;
     // const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
+   
     const selectTask = document.querySelectorAll('#taskBox > div.finished');
     for(let i = 0; i < selectTask.length;  i++ ){
         if( m == 'finished' ){
-            if(selectTask[i].attributes.finished != true){ 
-                selectTask[i].classList.add('show')
-            } else{
-                selectTask[i].classList.add('hide')
+            if(selectTask[i].attributes.finished ){ 
+                let done = selectTask[i]
+                finishedTasksBox.appendChild(done)
+                finishedTasksBox.className = "show"
             }
-        }
+        } 
     }
 
 
     // else if ( m == 'unfinished'){
-    //     finishedTask[0].classList.remove('show');
-    //     finishedTask[0].classList.add('hide')
-    // } 
+    //     selectTask[i].classList.remove('show');
+    // }
     // else if( m == 'All'){
     //     console.log('all')
     // }

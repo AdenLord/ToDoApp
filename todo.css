@@ -98,7 +98,8 @@
 }
 
 .hide{
-    display: none;
+    /* display: none; */
+    border: 2px solid #2b00ff;
 }
 
 .taskDone{
