@@ -102,12 +102,17 @@ function dropdownList(){
     // let tasks = taskBox.childNodes;
     // const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
     const selectTask = document.querySelectorAll('#taskBox > div.finished');
-
-    if( m == 'finished' ){
-        if(selectTask[0].attributes.finished != true){ 
-            selectTask[0].classList.add('hide')
+    for(let i = 0; i < selectTask.length;  i++ ){
+        if( m == 'finished' ){
+            if(selectTask[i].attributes.finished != true){ 
+                selectTask[i].classList.add('show')
+            } else{
+                selectTask[i].classList.add('hide')
+            }
         }
     }
+
+
     // else if ( m == 'unfinished'){
     //     finishedTask[0].classList.remove('show');
     //     finishedTask[0].classList.add('hide')
