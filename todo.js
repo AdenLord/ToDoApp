@@ -86,6 +86,7 @@ function finThisTask(e){
     e.stopPropagation()
     this.classList.toggle('finished');
     this.parentNode.classList.toggle('finished');
+    this.parentNode.toggleAttribute("finished");
 }
 
 //--select--------------------------------------------------------
@@ -98,13 +99,18 @@ function selectThisTask(){
 function dropdownList(){
     let i = this.selectedIndex;
     let m = this.options[i].text;
-    let tasks = taskBox.childNodes;
+    // let tasks = taskBox.childNodes;
+    // const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
+    const selectTask = document.querySelectorAll('#taskBox > div.finished');
 
     if( m == 'finished' ){
-        const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
+        if(selectTask[0].attributes.finished != true){ 
+            selectTask[0].classList.add('hide')
+        }
     }
     // else if ( m == 'unfinished'){
-    //     console.log('unfinished');
+    //     finishedTask[0].classList.remove('show');
+    //     finishedTask[0].classList.add('hide')
     // } 
     // else if( m == 'All'){
     //     console.log('all')

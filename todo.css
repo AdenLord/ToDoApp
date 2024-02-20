@@ -93,7 +93,12 @@
 }
 
 .show{
-    display: block;
+    display: flex;
+    border: 2px solid #d9ff00;
+}
+
+.hide{
+    display: none;
 }
 
 .taskDone{
