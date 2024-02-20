@@ -94,12 +94,6 @@
 
 .show{
     display: flex;
-    border: 2px solid #d9ff00;
-}
-
-.hide{
-    /* display: none; */
-    border: 2px solid #2b00ff;
 }
 
 .taskDone{

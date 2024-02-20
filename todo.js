@@ -3,7 +3,6 @@ const inputText = document.getElementById('inputText');
 const addTask = document.getElementById('addTask');
 const removeTaskBtn = document.getElementById('remove-btn');
 const taskBox = document.getElementById('taskBox');
-const finishedTasksBox = document.getElementById('finishedTasksBox');
 const dropdown = document.getElementById('myDropdown');
 
 //--event------------------------------------------------------
@@ -97,26 +96,19 @@ function selectThisTask(){
 }
 
 //--dropdown-----------------------------------------------------------
-function dropdownList(){
-    let i = this.selectedIndex;
-    let m = this.options[i].text;
+// function dropdownList(){
+//     let ind = this.selectedIndex;
+//     let m = this.options[ind].text;
     // let tasks = taskBox.childNodes;
     // const taskElement = [...tasks].filter( e => e.classList.contains('finished'));
    
-    const selectTask = document.querySelectorAll('#taskBox > div.finished');
-    for(let i = 0; i < selectTask.length;  i++ ){
-        if( m == 'finished' ){
-            if(selectTask[i].attributes.finished ){ 
-                let done = selectTask[i]
-                finishedTasksBox.appendChild(done)
-                finishedTasksBox.className = "show"
-            }
-        } 
-    }
-
-
-    // else if ( m == 'unfinished'){
-    //     selectTask[i].classList.remove('show');
+    // const selectTask = document.querySelectorAll('#taskBox > div');
+    // for(let i = 0; i < selectTask.length;  i++ ){
+    //     if( m == 'all' ){
+    //         selectTask[i].classList.add('show');
+    //     }else if ( m == 'finished'){
+    //         selectTask[i].classList.remove('show');
+    //     } 
     // }
     // else if( m == 'All'){
     //     console.log('all')
